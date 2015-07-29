@@ -1,0 +1,13 @@
+Notes
+
+Github:
+	git add
+	git commit -m "message"
+	git push -u origin master
+
+TO DO
+
+	research constructors
+	private vs public
+	nodes
+	clean up makefile

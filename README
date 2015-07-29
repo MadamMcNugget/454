@@ -1,0 +1,9 @@
+This package includes three demos for drawing a colored cube using different prjection matrices: orthogonal, frustum and perspective, respectively. 
+
+OpenGL version 3.0 and GLSL 130 are supported. 
+
+To compile and run the demo, type the following command in the terminal: 
+			make run
+and use keyboard (e.g. 'o', 'p', 'r', etc.) to control. 
+
+By default, the ortho demo is compiled. Change the line 20 in the makefile accordingly to test the other two demos. 
