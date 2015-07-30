@@ -1,25 +1,7 @@
 #! /usr/bin/make
 
-# Generic Makefile that should work with any program you're going to compile.
-# Any complaints should be directed at honghual@sfu.ca
-#
-# To compile and link your program all you have to do is run 'make' in the
-#    current directory.
-# To clean up object files run 'make clean_object'.
-# To delete any compiled files run 'make clean'.
-# Originated in 2001 by Haris Teguh
-# modified Jan-2015 by Honghua Li
-
-# Including of non standard library files:
-#   INCLUDEDIR is where the header files can be found
-#   LIBDIR is where the library object files can be found
-#INCLUDEDIR=include/
-#LIBDIR=lib
-#GLUI_LIB=lib
-
-# If you have more source files add them here 
+# Source file
 SOURCE= BpTree.cpp 
-#include/InitShader.cpp
 
 # The compiler we are using 
 CC= g++
@@ -32,20 +14,9 @@ CFLAGS= -O3 -g -Wall -pedantic -DGL_GLEXT_PROTOTYPES
 # The name of the final executable 
 EXECUTABLE= tree
 
-# The basic library we are using add the other libraries you want to link
-# to your program here 
-
-# Linux (default)
-#LDFLAGS = -lGL -lglut -lglui -lGLU -lGLEW -lXext -lX11 -lm
-
-# If you have other library files in a different directory add them here 
-#INCLUDEFLAG= -I. -I$(INCLUDEDIR) -Iinclude/
-#LIBFLAG= -L$(LIBDIR) -L$(GLUI_LIB)
-
-# Don't touch this one if you don't know what you're doing 
+# Don't touch 
 OBJECT= $(SOURCE:.cpp=.o)
 
-# Don't touch any of these either if you don't know what you're doing 
 all: $(OBJECT) depend
 	$(CC) $(CFLAGS) $(INCLUDEFLAG) $(LIBFLAG) $(OBJECT) -o $(EXECUTABLE) $(LDFLAGS)
 
@@ -65,4 +36,4 @@ run: all
 	rm -f $(OBJECT)
 	./demo
 
-#include depend
+include depend
