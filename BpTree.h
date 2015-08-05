@@ -26,19 +26,20 @@ class BpTree
 			//prints the keys in each node with nodes of the same level appearing on the same line
 
 		void printValues();
-			//prints the values in key (not value) order
+			//prints the values in key (not value) order. Print one value per line.
 
 	private:
 		int numKeys;  // number of keys
 
-		typedef struct node 
-		{
-			int *keys;   		// keys
-			void **pointers; 	// values
-			bool isLeaf;  
 
-			struct node *parent;
-			struct node *next;
-		} node;
 			
 };
+
+struct node
+{
+    int *key;
+    node **child_ptr;
+    bool isLeaf;
+    int n;
+    node *parent;
+}*root = NULL, *np = NULL, *you = NULL;

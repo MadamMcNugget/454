@@ -1,7 +1,7 @@
 #! /usr/bin/make
 
 # Source file
-SOURCE= BpTree.cpp 
+SOURCE= scrap.cpp 
 
 # The compiler we are using 
 CC= g++
